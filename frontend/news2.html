@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaccine Updates - COVID Tracker</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.8;
+      }
+
+      .news-hero {
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url("https://eghealthcare.net/app/uploads/2023/05/image-4-1024x682.webp");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0;
+        text-align: center;
+      }
+
+      .news-hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .news-hero p {
+        font-size: 1.5rem;
+      }
+
+      .content-section {
+        padding: 50px 0;
+      }
+
+      .content-section h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .content-section p {
+        font-size: 1.3rem;
+        text-align: justify;
+      }
+
+      .content-section ul li {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+
+      .content-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .info-card {
+        padding: 20px;
+        background-color: #f8d210;
+        color: black;
+        font-size: 1.4rem;
+        font-weight: bold;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-back {
+        font-size: 1.3rem;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+
+    <!-- Hero Section -->
+    <section class="news-hero">
+      <div class="container">
+        <h1>Latest Vaccine Updates</h1>
+        <p>Discover the latest advancements in COVID-19 vaccines.</p>
+      </div>
+    </section>
+
+    <!-- Booster Shot Information -->
+    <section class="container content-section">
+      <h2>New Booster Shots Available</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img
+            src="https://www.livelaw.in/h-upload/2021/05/10/750x450_393232-covid-vaccine.jpg"
+            alt="Vaccine Updates"
+          />
+        </div>
+        <div class="col-md-6">
+          <p>
+            Pharmaceutical companies have developed new booster shots that are
+            more effective against emerging COVID-19 variants. Scientists
+            recommend getting the updated shots for better protection.
+          </p>
+          <ul>
+            <li>
+              <strong>Moderna & Pfizer:</strong> New Omicron-targeted boosters
+              released.
+            </li>
+            <li>
+              <strong>Effectiveness:</strong> Reduces severe illness by 80%.
+            </li>
+            <li>
+              <strong>Who should take it?</strong> Everyone above 12 years is
+              eligible.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vaccine Details -->
+    <section class="container content-section">
+      <h2>Which Vaccine is Right for You?</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="info-card">💉 Pfizer - Best for all age groups</div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card">💉 Moderna - Stronger response for adults</div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card">💉 Johnson & Johnson - Single-dose option</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="container text-center my-5">
+      <a href="index.html" class="btn btn-secondary btn-back">⬅ Back to Home</a>
+    </div>
+
+    <div id="footer-container"></div>
+  </body>
+</html>
