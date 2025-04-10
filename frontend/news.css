@@ -1,0 +1,108 @@
+/* General Page Styling */
+body {
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 50px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0d6efd;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Center Cards & Responsive Grid */
+#news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* News Card Styling */
+.card {
+  width: 350px;
+  height: 450px; /* Fixed height for uniformity */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Card Content */
+.card-body {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  min-height: 40px;
+  text-align: left;
+}
+
+/* Card Text */
+.card-text {
+  color: #555;
+  font-size: 0.9rem;
+  min-height: 50px;
+  text-align: left;
+}
+
+/* Read More Button */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  border-radius: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #004a99;
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}

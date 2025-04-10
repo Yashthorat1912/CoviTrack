@@ -1,0 +1,221 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blue Gradient */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animated Background Particles */
+body::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  top: 10%;
+  left: 20%;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 6s infinite alternate ease-in-out;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.15);
+  bottom: 15%;
+  right: 15%;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 5s infinite alternate ease-in-out;
+}
+
+/* Floating Effect */
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+/* Glassmorphism Effect for Form Box */
+.login-container,
+.register-container {
+  max-width: 550px;
+  width: 90%;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.15); /* Transparent Glass Effect */
+  border-radius: 15px;
+  box-shadow: 0px 12px 50px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+h3 {
+  color: white;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+  opacity: 0;
+  animation: slideDown 1s ease-in-out forwards;
+}
+
+/* Slide Down Effect */
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  font-size: 18px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Button styles */
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Gradient Effects */
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #003d82);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745, #1d7a31);
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #1d7a31, #135121);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Button Hover Animation */
+button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover::before {
+  left: 0;
+}
+
+/* Login/Register Link */
+p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+p a {
+  color: #ffdd57;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .login-container,
+  .register-container {
+    width: 95%;
+    padding: 40px;
+  }
+}
