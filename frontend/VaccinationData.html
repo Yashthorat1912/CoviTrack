@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vaccination Doses Done</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      h1 {
+        text-align: center;
+        padding-top: 40px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        padding: 10px;
+        margin: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      #vaccinationChart {
+        margin-top: 30px;
+        width: 100%;
+        height: 500px;
+      }
+      #loadingMessage {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <h1>Vaccination Doses Done (Live)</h1>
+
+    <div id="loadingMessage" style="display: none">
+      <p>Loading vaccination data...</p>
+    </div>
+
+    <table id="vaccinationTable">
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>Dose 1</th>
+          <th>Dose 2</th>
+          <th>Booster</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- This will be populated by JS -->
+      </tbody>
+    </table>
+
+    <canvas id="vaccinationChart"></canvas>
+    <div id="footer-container"></div>
+    <script src="vaccination-data.js"></script>
+  </body>
+</html>

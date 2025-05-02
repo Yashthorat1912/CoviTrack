@@ -1,0 +1,104 @@
+/* Reset and Base Styles */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #eef5ff, #d6ecff);
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  color: #222;
+  font-size: 34px;
+}
+
+/* Label above dropdown */
+label {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #555;
+  font-size: 26px;
+}
+
+/* Dropdown filter */
+select {
+  display: block;
+  margin: 10px auto 30px auto;
+  padding: 8px 12px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+select:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Chart styling */
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: block;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive navbar support */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  select {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  canvas {
+    width: 98% !important;
+    margin: 15px auto;
+  }
+}
+#stateSearch {
+  padding: 0.6rem 1.2rem;
+  width: 260px;
+  border: 2px solid #00bcd4;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 188, 212, 0.1);
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+#stateSearch:focus {
+  border-color: #0288d1;
+  box-shadow: 0 0 0 4px rgba(2, 136, 209, 0.1);
+  background-color: #ffffff;
+}
